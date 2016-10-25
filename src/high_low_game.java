@@ -26,6 +26,7 @@ String Cows = JOptionPane.showInputDialog("Guess a numba betwen 1 and 100 (use a
 		
 		
 if(Pigs == Ducks){
+	Pigs = new Random().nextInt(100)+1;
 	JOptionPane.showMessageDialog(null, "You won a HHHHUNDRED dolors");
 		Wins =+ 1;
 	String YN = JOptionPane.showInputDialog("Do you want to buy an extra life for five hundred (Yes/No all Caps)");
