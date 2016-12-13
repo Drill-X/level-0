@@ -43,6 +43,7 @@ speak("That was easy");
 		easyButtonImage.addMouseListener(this);
 
 
+
 	}
 
 
