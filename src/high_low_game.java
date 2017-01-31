@@ -7,7 +7,8 @@ public class high_low_game {
 
 	public static void main(String[] args) {
 		// 3. Change this line to give you a random number between 1 - 100. 
-		int Pigs = new Random().nextInt(100)+1;
+		Random g = new Random();
+		int Pigs = g.nextInt(100)+1;
 		// 2. Print out the random variable above
 		System.out.println(Pigs);
 		// 11. do the following 10 times
@@ -23,13 +24,26 @@ String Cows = JOptionPane.showInputDialog("Guess a numba betwen 1 and 100 (use a
 
 
 	int Ducks = Integer.parseInt(Cows);
-		
+	if(Ducks > Pigs){
+		JOptionPane.showMessageDialog(null, "Too High");
+		Sheep =+ 1;
+	}
+					// 8. tell them it's too high
+	if(Ducks < Pigs){
+	JOptionPane.showMessageDialog(null, "Too Low");	
+		Sheep =+ 1;
+	}
+				// 9. if the guess is low
+					// 10. tell them it's too low
+	if(Sheep == 5){
+		JOptionPane.showMessageDialog(null, "You lose (Why you wast yo time playing this game)");
+	}
 		
 if(Pigs == Ducks){
-	Pigs = new Random().nextInt(100)+1;
+	 Pigs = g.nextInt(100)+1;
 	JOptionPane.showMessageDialog(null, "You won a HHHHUNDRED dolors");
 		Wins =+ 1;
-	String YN = JOptionPane.showInputDialog("Do you want to buy an extra life for five hundred (Yes/No all Caps)");
+	String YN = JOptionPane.showInputDialog("Do you want to buy an extra life for five hundred (Yes/No all Caps) you have "+ Wins + " wins");
 	if(YN == "YES" && Wins == 5){
 		JOptionPane.showMessageDialog(null, "new life");
 		Sheep =- 1;
@@ -45,20 +59,7 @@ if(Pigs == Ducks){
 				// 6. win
 			// 7. if the guess is high
 
-if(Ducks > Pigs){
-	JOptionPane.showMessageDialog(null, "Too High");
-	Sheep =+ 1;
-}
-				// 8. tell them it's too high
-if(Ducks < Pigs){
-JOptionPane.showMessageDialog(null, "Too Low");	
-	Sheep =+ 1;
-}
-			// 9. if the guess is low
-				// 10. tell them it's too low
-if(Sheep == 5){
-	JOptionPane.showMessageDialog(null, "You lose (Why you wast yo time playing this game whaen you could have jumped that cliff two mins ago anywhey)");
-}
+
 }
 
 		// 12. tell them they lose
